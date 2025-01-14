@@ -1,7 +1,7 @@
 # Web Application Mimicking Google Sheets
 This project is a web application that mimics the user interface and core functionalities of Google Sheets. It is built using HTML, CSS, and JavaScript and supports various features such as mathematical functions, data quality tools, dynamic cell interactions, and more.
 ---
-Live Demo : 
+Live Demo : https://gautam5514.github.io/mimic_google_Sheet_Zeotap/
 
 <img width="920" alt="image" src="https://github.com/user-attachments/assets/7a6d8d34-16ce-4578-9d07-5a424bcda867" />
 
