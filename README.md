@@ -3,7 +3,8 @@ This project is a web application that mimics the user interface and core functi
 ---
 Live Demo : 
 
-![image](https://github.com/user-attachments/assets/1ca0779b-f08e-4f93-b0b1-a2ee8c207101)
+<img width="920" alt="image" src="https://github.com/user-attachments/assets/7a6d8d34-16ce-4578-9d07-5a424bcda867" />
+
 
 ## Features
 
@@ -59,7 +60,7 @@ The following mathematical functions are supported:
 
 2. Navigate to the project directory:
    ```bash
-   cd google-sheets-clone
+   cd google-sheets
    ```
 
 3. Open `index.html` in a browser to run the application.
@@ -96,28 +97,6 @@ The following mathematical functions are supported:
 3. **Advanced Charting:** Allow users to customize chart types and ranges.
 4. **Improved Data Validation:** Add stricter validation rules for specific data types.
 
----
-
----
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
----
 
 ## Authors
 - Gautam Pandit
