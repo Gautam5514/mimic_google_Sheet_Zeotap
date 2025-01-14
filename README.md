@@ -3,7 +3,8 @@ This project is a web application that mimics the user interface and core functi
 ---
 Live Demo : 
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/1ca0779b-f08e-4f93-b0b1-a2ee8c207101)
+
 ## Features
 
 ### 1. Spreadsheet Interface
