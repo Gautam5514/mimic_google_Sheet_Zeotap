@@ -55,7 +55,7 @@ The following mathematical functions are supported:
 
 1. Clone this repository:
    ```bash
-   git clone 
+   git clone https://github.com/Gautam5514/mimic_google_Sheet_Zeotap.git
    ```
 
 2. Navigate to the project directory:
