@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar button, .toolbar input {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Smooth edges for a modern look */
+    background: linear-gradient(145deg, #e6e6e6, #ffffff); /* Subtle gradient effect */
+    box-shadow: 3px 3px 6px #b1b1b1, -3px -3px 6px #ffffff; /* Neumorphism shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    color: #333;
+}
+
+.toolbar button:hover {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Reverse gradient */
+    box-shadow: inset 3px 3px 6px #b1b1b1, inset -3px -3px 6px #ffffff; /* Inset shadow for pressed look */
+    color: #4285f4; /* Change text color on hover */
+    border-color: #4285f4; /* Add focus to hover state */
+}
+
+.toolbar button.active {
+    background-color: #4285f4; /* Google-style primary blue */
+    color: white;
+    border-color: #005cbf;
+    box-shadow: none; /* Flat look when active */
+}
+
+.controls input, #formulaBar {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 6px #b1b1b1, inset -3px -3px 6px #ffffff; /* Subtle shadow for input */
+    transition: all 0.3s ease;
+}
+
+.controls input:focus, #formulaBar:focus {
+    outline: none;
+    border-color: #4285f4; /* Blue focus outline */
+    box-shadow: 0 0 8px rgba(66, 133, 244, 0.5); /* Glow effect */
+}
+
+button#darkModeToggle {
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 50%; /* Circular toggle button */
+    background-color: #333;
+    color: white;
+    box-shadow: 3px 3px 6px #1a1a1a, -3px -3px 6px #444; /* Neumorphism for dark mode toggle */
+}
+
+button#darkModeToggle:hover {
+    background-color: #444;
+    box-shadow: inset 3px 3px 6px #1a1a1a, inset -3px -3px 6px #555; /* Pressed look */
+}
+
+.save-load button {
+    padding: 10px 15px;
+    background-color: #4caf50; /* Success green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #3a9c3e, -3px -3px 6px #5ed260; /* Neumorphism green shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.save-load button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    box-shadow: 2px 2px 5px #328233, -2px -2px 5px #66e06c; /* Reduced shadow on hover */
+}
+
+.save-load input[type="file"] {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #f4f4f4;
+    box-shadow: inset 2px 2px 4px #dcdcdc, inset -2px -2px 4px #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#chartCanvas {
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 6px #d17e00, -3px -3px 6px #ffac33;
+}
+
+button#chartCanvas:hover {
+    background-color: #e57b00;
+    box-shadow: inset 2px 2px 4px #d17e00, inset -2px -2px 4px #ffac33;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.controls input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 6px #b1b1b1, inset -3px -3px 6px #ffffff;
+}
+
+#spreadsheet-container {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+#spreadsheet {
+    display: grid;
+    grid-template-columns: repeat(100, minmax(100px, 1fr)); /* Limit columns for performance */
+    grid-auto-rows: minmax(30px, auto);
+    background-color: #fff;
+}
+
+.cell.header {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.cell {
+    background-color: white;
+    padding: 5px;
+    text-align: left;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    min-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.cell[contenteditable="true"]:focus {
+    outline: 2px solid #4285f4;
+}
+
+.save-load {
+    margin: 20px 0;
+}
+
+#chartCanvas {
+    margin-top: 20px;
+}
+
+#dataValidationMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .toolbar button, .toolbar input {
+        margin-right: 5px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .controls input {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+}
